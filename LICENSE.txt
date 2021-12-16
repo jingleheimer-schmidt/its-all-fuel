@@ -1,0 +1,53 @@
+License text can go here:
+*Basic sharing-positive Licenses for CODE*
+Unlicense - anyone can take and use this mod without giving credit or restriction
+MIT - share but also give credit to previous coders
+GPL_v3 - shared at the end of a gun! if *changes* are made, new code is shared too! (using is complicated)
+
+Restrictive licenses come in many forms:
+-no license listed on mod page or mod of unknown origin and nothing in zip
+bobs
+"I own this and you aren't allowed to do anything"
+Usually permit distributing the mod, but not changes / adaptations / "work derived from"
+
+
+Copyrights!
+-made for texts / graphics / sounds / "assets" / "resources" etc
+-code licenses are often similar
+-usually focus more on commercial aspects / "adaptations" / "derivatives"
+- Creative Commons licenses are common and have many different restrictions and permissions
+
+Generally speaking:
+1) ALWAYS check original mods before using code and licenses (some are 100% restrictive, many are MIT, some are Unlicense)
+2) Factorio assets can be used and adapted, for use in Factorio, but use is ruled by Wube / Factorio team
+3) Licensing is important, but not often a problem until somebody raises a concern
+4) similar licenses and less restrictive licenses are easiest to follow
+
+
+#### SKELETON MOD -- REMOVE ME PLEASE IF YOU USE THIS SKELETON :D ####
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org/>
+
+#######
