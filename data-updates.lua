@@ -1,29 +1,72 @@
 
-local alt_values = {
+local alt_subgroup_values = {
   "intermediate-product" = data.raw.item["coal"].fuel_value or "4MJ",
   "raw-material" = data.raw.item["wood"].fuel_value or "2MJ",
 }
 
-local restrictions = {
+local alt_item_values = {
+  "crude-oil-barrel" = "10MJ",
+  "heavy-oil-barrel" = "10MJ",
+  "light-oil-barrel" = "11MJ",
+  "lubricant-barrel" = "10MJ",
+  "petroleum-gas-barrel" = "10MJ",
+  "sulfuric-acid-barrel" = "10MJ",
+  "water-barrel" = "1MJ",
+ }
+
+local subgroup_enabled = {
   "raw-resource" = settings.startup["its-all-fuel_ores"].value,
-  "plates" = settings.startup["its-all-fuel_plates"].value,
+--   "plates" = settings.startup["its-all-fuel_plates"].value,
   "ammo" = settings.startup["its-all-fuel_ammo"].value,
   "gun" = settings.startup["its-all-fuel_guns"].value,
   "equipment" = settings.startup["its-all-fuel_equipment"].value,
   "military-equipment" = settings.startup["its-all-fuel_equipment"].value,
   "armor" = settings.startup["its-all-fuel_armor"].value,
   "blueprints" = settings.startup["its-all-fuel_blueprints"].value,
-  "everything-else" = settings.startup["its-all-fuel_everything-else"].value
+--   "everything-else" = settings.startup["its-all-fuel_everything-else"].value
 }
+
+-- local subgroup_disabled = function(subgroup)
+--   if subgroup_enabled[subgroup] then
+--     return "no"
+--   elseif subgroup_enabled["everything-else"] then
+--     return "no"
+--   else
+--     return "yes"
+--   end
+-- end
+
+local skip_plates = function(item)
+  if not settings.startup["its-all-fuel_plates"].value then
+    return string.find("-plate", item.name)
+  end
+end
 
 for i,item in pairs(data.raw.item) do
   if not item.fuel_value then
-    if not (restrictions[item.subgroup] or restrictions["everything-else"]) then
-      data.raw.item[i].fuel_value = alt_values[data.raw.item[i].fuel_category] or "3.5MJ"
-      data.raw.item[i].fuel_category = "chemical"
+    if not subgroup_enabled[item.subgroup] then
+      return
+    elseif not skip_plates(item) then 
+      if subgroup_enabled["everything-else"] then
+        data.raw.item[i].fuel_value = alt_item_values[item.name] or alt_subgroup_values[item.subgroup] or "3.5MJ"
+        data.raw.item[i].fuel_category = "chemical"
+      end
     end
   end
 end
+
+-- for i,item in pairs(data.raw.item) do
+--   if not item.fuel_value then
+--     if subgroup_disabled(item.subgroup) == "no" then
+--       if not skip_plates(item) then 
+--         if subgroup_enabled["everything-else"] then
+--           data.raw.item[i].fuel_value = alt_item_values[item.name] or alt_subgroup_values[item.subgroup] or "3.5MJ"
+--           data.raw.item[i].fuel_category = "chemical"
+--         end
+--       end
+--     end
+--   end
+-- end
 
 -- /c
 -- local test = {}
