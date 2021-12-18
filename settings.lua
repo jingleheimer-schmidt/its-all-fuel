@@ -44,8 +44,14 @@ data:extend({
   },
   {
     type = "bool-setting",
-    name = "its-all-fuel_everything-else",
+    name = "its-all-fuel_intermediates",
     setting_type = "startup",
     default_value = "true",
   }
+  -- {
+  --   type = "bool-setting",
+  --   name = "its-all-fuel_everything-else",
+  --   setting_type = "startup",
+  --   default_value = "true",
+  -- }
 })
